@@ -1,0 +1,16 @@
+services:
+  sanpdf:
+    # GitHub Container Registry (Recommended)
+    # simple mode - ghcr.io/alam00000/sanpdf-simple:latest
+    # default mode - ghcr.io/alam00000/sanpdf:latest
+    # Docker Hub (Alternative)
+    # simple mode - sanpdfteam/sanpdf-simple:latest
+    # default mode - sanpdfteam/sanpdf:latest
+    image: ghcr.io/alam00000/sanpdf-simple:latest
+    container_name: sanpdf
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    # For IPv4-only environments
+    #environment:
+    #  - DISABLE_IPV6=true
